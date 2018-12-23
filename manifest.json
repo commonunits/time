@@ -1,5 +1,5 @@
 {
-	"description": "Adds CUTime Extension icon to toolbar. Upon Pressing, CUTime will open in new Tab.",
+	"description": "Showing Time in Common Units.Adds CUTime Extension icon to toolbar. Upon Pressing, CUTime will open in new Tab.",
 	"manifest_version": 2,
 	"name": "CUTime - Extension",
 	"version": "1.0",
@@ -13,9 +13,10 @@
 		]
 	},
 	"chrome_url_overrides": {
-		"newtab": "./cutime.html"
+		"newtab": "./src/cutime.html"
 	},
 	"browser_action": {
-		"default_icon": "./assests/images/icons/icon-book.png"
+		"default_icon": "./assests/images/icons/icon-book.png",
+		"default_title": "CUTime - Extension"
 	}
 }

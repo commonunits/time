@@ -3,7 +3,7 @@ function OpenCuTimeHTML() {
 	// Open a new tab. 
 	browser.tabs.create({
 		// loads "cutime.html" into it.
-		"url": "/cutime.html"
+		"url": "./src/cutime.html"
 	});
 }
 

@@ -1,0 +1,20 @@
+body {
+	background-color: black;
+	color: azure;
+	height: 100%;
+	width: 100%;
+	overflow: none;
+	font-family: 'Roboto Mono', monospace;
+}
+
+#headerSec, #CUTimeBox, #SITimeBox {
+	text-align: center
+}
+
+#CUTimeBox, #SITimeBox {
+	margin-top: 25vh;
+}
+
+footer {
+	margin-top: 14vh;
+}

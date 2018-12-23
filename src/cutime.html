@@ -17,24 +17,30 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" type="text/css"
 	 charset="utf-8">
 	<link rel="stylesheet" href="css/styles.css" type="text/css" charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
 </head>
 
 <body>
-	<div id="headerSec">
-		<h2>CUTime</h2>
-		<h4>Showing Time in Common Units</h4>
-	</div>
-
 
 	<div id="CUTimeBox">
-		<div id="KiloClarkeDiv">
-
+		<div id="KiloClarkeDiv" class="cutimediv">
+			<h1 id="kiloClarke"></h1>
+			<p> kiloclarke </p>
 		</div>
-		<h1 id="CUTime"></h1>
-		<p> Current Time in Common Units</p>
+
+		<div id="HectoClarkeDiv" class="cutimediv">
+			<h1 id="hectoClarke"></h1>
+			<p> hectoclarke </p>
+		</div>
+
+		<div id="ClarkeDiv" class="cutimediv">
+			<h1 id="clarke"></h1>
+			<p> clarke </p>
+		</div>
+		<!-- <h1 id="CUTime"></h1> -->
+		<p> Current Time in <a href="https://github.com/commonunits/draft">Common Units</a>
+		</p>
 	</div>
 
 	<div id="SITimeBox">
@@ -43,7 +49,6 @@
 	</div>
 
 	<footer>
-		<a href="https://github.com/commonunits/draft">Common Units</a>
 	</footer>
 	<!-- Scripts loaded here -->
 	<script src="js/cutime.js" type="application/javascript"></script>

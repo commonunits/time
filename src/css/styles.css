@@ -1,13 +1,13 @@
 body {
 	background-color: black;
-	color: azure;
+	color: teal;
 	height: 100%;
 	width: 100%;
 	overflow: none;
 	font-family: 'Roboto Mono', monospace;
 }
 
-#headerSec, #CUTimeBox, #SITimeBox {
+#CUTimeBox, #SITimeBox {
 	text-align: center
 }
 
@@ -15,6 +15,23 @@ body {
 	margin-top: 25vh;
 }
 
-footer {
-	margin-top: 14vh;
+.cutimediv{
+	display: inline-block;
+	text-align: left;
+	width: 4.5rem;
+	padding: 1rem;
+	margin: 0 1rem;
+	background: #111;
+}
+
+.cutimediv h1 {
+	font-size: 4rem;
+	margin: 0;
+	color: tomato;
+}
+
+#CUTimeBox a {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
 }

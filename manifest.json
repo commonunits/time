@@ -1,0 +1,21 @@
+{
+	"description": "Adds CUTime Extension icon to toolbar. Upon Pressing, CUTime will open in new Tab.",
+	"manifest_version": 2,
+	"name": "CUTime - Extension",
+	"version": "1.0",
+	"homepage_url": "https://github.com/limatgans/Cutime-Extension",
+	"icons": {
+		"48": "./assests/images/icons/icon-book.png"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"chrome_url_overrides": {
+		"newtab": "./cutime.html"
+	},
+	"browser_action": {
+		"default_icon": "./assests/images/icons/icon-book.png"
+	}
+}

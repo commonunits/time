@@ -21,7 +21,7 @@ const cuTimeConversion = (dateToBeConverted) => {
 		kiloClarke : "0" + tempArray[0] + ".",
 		hectoClarke: tempArray[1][0] + tempArray[1][1],
 		clarke: tempArray[1][2] + tempArray[1][3] 
-	}
+	};
 }
 
 setInterval(() => {

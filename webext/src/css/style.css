@@ -1,6 +1,13 @@
 :root {
-	--primary-colour: rgba(255, 130, 188);
-	--secondary-colour: rgb(255, 253, 118);
+	--background-1: #443C6B;
+	--background-2: #483A6D;
+	--primary-colour: rgba(255, 130, 190);
+	--secondary-colour: rgb(255, 250, 120);
+	--tertiary-colour: rgb(0, 255, 255);
+
+	font-family: 'Roboto Mono', monospace;
+	color: var(--primary-colour);
+	text-align: center;
 }
 
 body {
@@ -9,14 +16,10 @@ body {
 	justify-content: center;
 
 	height: 100vh;
-	width: 100%;
+	width: 100vw;
 
-	background: #2234aa;
-	background: linear-gradient(to bottom, #443C6B 0%, #483A6D 100%);
-
-	font-family: 'Roboto Mono', monospace;
-	color: var(--primary-colour);
-	text-align: center;
+	background: var(--background-1);
+	background: linear-gradient(to top, var(--background-1) 0%, var(--background-2) 100%);
 }
 
 a {
@@ -52,18 +55,26 @@ a {
 	color: var(--secondary-colour);
 }
 
+.cu-percent {
+	color: var(--secondary-colour);
+	padding: 0.5em 0.5em;
+	font-weight: bold;
+	border-bottom: 1px solid;
+}
+
 .day-loader {
 	width: 40%;
 	margin: auto;
-	min-height: 4px;
-	background: #fff;
+	min-height: 6px;
+	/* background: #fff; */
+	border: 0.5px solid var(--tertiary-colour);
 	position: relative;
 }
 
 .progress-loader {
 	min-height: 100%;
 	width: 0;
-	background: var(--primary-colour);
+	background: var(--tertiary-colour);
 	position: absolute;
 }
 

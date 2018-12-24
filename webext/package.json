@@ -1,6 +1,6 @@
 {
 	"name": "@commonunits/time-web-ext",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Add CommonUnits time to new tab and toolbar.",
 	"main": "src/index.html",
 	"scripts": {

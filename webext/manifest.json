@@ -13,7 +13,7 @@
 		]
 	},
 	"chrome_url_overrides": {
-		"newtab": "./src/cutime.html"
+		"newtab": "./src/index.html"
 	},
 	"browser_action": {
 		"default_icon": "./assests/images/icons/icon-book.png",

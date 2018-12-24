@@ -2,7 +2,7 @@
 
 function OpenCommonUnitsTime() {
 	browser.tabs.create({
-		"url": "./src/cutime.html"
+		"url": "./src/index.html"
 	});
 }
 

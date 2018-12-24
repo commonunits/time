@@ -1,5 +1,5 @@
-# Cutime-Extension
-A Browser Extension - Showing Time in Common Units
+# CommonUnits/time
 
-Work in Progress.
-For more about Common Units - Head to https://github.com/commonunits
+This repo contains tools and proof of concepts for [CommonUnits](https://github.com/CommonUnits)/time. It currently houses:
+
+- CommonUnits/time WebExtension - Show Time in CommonUnits

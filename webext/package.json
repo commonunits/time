@@ -1,0 +1,30 @@
+{
+	"name": "@commonunits/time-web-ext",
+	"version": "1.0.0",
+	"description": "Add CommonUnits time to new tab and toolbar.",
+	"main": "src/index.html",
+	"scripts": {
+		"build": "web-ext build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/commonunits/time.git"
+	},
+	"keywords": [
+		"CommonUnits",
+		"time",
+		"webextension"
+	],
+	"author": "Ganesh",
+	"contributors": [
+		"Muthu Kumar <@MKRhere> (https://mkr.pw)"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/commonunits/time/issues"
+	},
+	"homepage": "https://github.com/commonunits/time#readme",
+	"dependencies": {
+		"web-ext": "^2.9.3"
+	}
+}

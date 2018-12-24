@@ -1,11 +1,9 @@
 "use strict";
-function OpenCuTimeHTML() {
-	// Open a new tab. 
+
+function OpenCommonUnitsTime() {
 	browser.tabs.create({
-		// loads "cutime.html" into it.
 		"url": "./src/cutime.html"
 	});
 }
 
-// Adding OpenCuTimeHTML() as a listener.
-browser.browserAction.onClicked.addListener(OpenCuTimeHTML);
+browser.browserAction.onClicked.addListener(OpenCommonUnitsTime);

@@ -4,13 +4,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8; X-Content-Type-Options=nosniff">
-	<title>CUTime Extension</title>
+	<title>New tab</title>
 	<meta name="keywords" content="Cutime">
-	<meta name="description" content="Adds CUTime Extension icon to toolbar. Upon Pressing, CUTime will open in new Tab.">
 	<meta name="subject" content="Showing Time in Common Units">
 	<meta name="copyright" content="MIT License">
 	<meta name="language" content="EN">
-	<meta name="robots" content="index,follow">
 	<meta name="author" content="Ganesh <@limatgans>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
@@ -23,28 +21,36 @@
 
 <body>
 
-	<div id="CUTimeBox">
-		<div id="KiloClarkeDiv" class="cutimediv">
-			<h1 id="kiloClarke"></h1>
-			<p> kiloclarke </p>
-		</div>
-
-		<div id="HectoClarkeDiv" class="cutimediv">
-			<h1 id="hectoClarke"></h1>
-			<p> hectoclarke </p>
-		</div>
-
-		<div id="ClarkeDiv" class="cutimediv">
-			<h1 id="clarke"></h1>
-			<p> clarke </p>
-		</div>
-		<p> Current Time in <a href="https://github.com/commonunits/draft">Common Units</a>
+	<div id="main">
+		<p>
+			Current Time in 
+			<a href="https://github.com/commonunits/draft">Common Units</a>
 		</p>
-	</div>
+		<div id="cu-time" class="cu-time">
+			<div class="cu-time-unit">
+				<h1></h1>
+				<p>kiloclarkes</p>
+			</div>
 
-	<div id="SITimeBox">
-		<h5 id="SITime"></h5>
-		<p> Current Time in SI Units</p>
+			<div class="cu-time-unit">
+				<h1></h1>
+				<p>hectoclarkes</p>
+			</div>
+
+			<div class="cu-time-unit">
+				<h1></h1>
+				<p>clarkes</p>
+			</div>
+		</div>
+		<p>
+			which is exactly <span id="cu-percent"></span>% of today
+		</p>
+		<div id="day-loader" class="day-loader">
+			<div id="progress-loader" class="progress-loader"></div>
+		</div>
+		<div id="si-time" class="si-time">
+			<h4></h4>
+		</div>
 	</div>
 
 	<!-- Scripts loaded here -->

@@ -1,35 +1,55 @@
 "use strict";
 
-const siTimeHeader = document.getElementById("SITime");
-const kiloClarkeHeader = document.getElementById("kiloClarke"); 
-const hectoClarkeHeader = document.getElementById("hectoClarke");
-const clarkeHeader = document.getElementById("clarke");
+window.addEventListener("load", (function () {
+	const commonUnitsTime = document.getElementById("cu-time");
+	const percentOfToday = document.getElementById("cu-percent");
+	const progressLoader = document.getElementById("progress-loader");
+	const siTime = document.getElementById("si-time").children[0];
 
-const interval = 500;
-const dayInSeconds = 86400;
+	const [ kiloClarke, hectoClarke, clarke ] = Array
+		.from(commonUnitsTime.children)
+		.map(el => el.children[0]);
 
-const cuTimeConversion = (dateToBeConverted) => {
-	const hours = dateToBeConverted.getHours();
-	const minutes = dateToBeConverted.getMinutes();
-	const seconds = dateToBeConverted.getSeconds();
-	const timeInSeconds = (hours * 60 * 60) + (minutes * 60) + seconds;
+	const dayInS = 24 * 60 * 60;
+	const dayInMs = dayInS * 1000;
+	const dayInϾ = 10 * 100 * 100;
+	// Number of seconds to a clarke
+	const interval = dayInS / dayInϾ;
 
-	// Conversion Done Here
-	const kiloClarkes = (timeInSeconds / dayInSeconds) * 10; 
-	const tempArray = kiloClarkes.toFixed(4).split(".");
-	return {
-		kiloClarke : "0" + tempArray[0] + ".",
-		hectoClarke: tempArray[1][0] + tempArray[1][1],
-		clarke: tempArray[1][2] + tempArray[1][3] 
+	const multiplierIndex = [ 60 * 60 * 1000, 60 * 1000, 1000, 1 ];
+
+	const splitTime = date => [
+		date.getHours(),
+		date.getMinutes(),
+		date.getSeconds(),
+		date.getMilliseconds(),
+	];
+
+	const getTimeInMs = date =>
+		splitTime(date).reduce(
+			(acc, cur, i) => acc + cur * multiplierIndex[i], 0);
+
+	const convertTimeToCommonUnits = (date) => {
+		const percent = (getTimeInMs(date) / dayInMs) * 100;
+		const kiloClarkes = percent / 10;
+		const [ kϾ, rest ] = kiloClarkes.toFixed(4).split(".");
+		// Slice rest to get hϾ and Ͼ
+		return [ percent, kϾ + ".", rest.slice(0, 2), rest.slice(2) ];
 	};
-}
 
-setInterval(() => {
-	const nowDate = new Date();
-	siTimeHeader.innerText = nowDate.toLocaleString();
-	const {kiloClarke, hectoClarke, clarke} = cuTimeConversion(nowDate)
-	kiloClarkeHeader.innerText = kiloClarke;
-	hectoClarkeHeader.innerText = hectoClarke;
-	clarkeHeader.innerText = clarke;
-}, interval);
+	setInterval(function () {
 
+		const now = new Date();
+		siTime.textContent = now.toLocaleString();
+		const [ percent, kϾ, hϾ, Ͼ ] = convertTimeToCommonUnits(now);
+
+		percentOfToday.textContent = percent.toFixed(3);
+		progressLoader.style.width = `${percent.toFixed(2)}%`;
+
+		kiloClarke.textContent = kϾ;
+		hectoClarke.textContent = hϾ;
+		clarke.textContent = Ͼ;
+
+	}, interval);
+
+}));

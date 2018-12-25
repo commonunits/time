@@ -1,0 +1,9 @@
+#!/bin/bash
+
+seconds=$(($(date +%-H)*3600 + $(date +%-M)*60 + $(date +%-S)))
+clarkes=$(printf '%05d' $(($seconds*100000/86400)))
+ln -fs ../images/$((clarkes/10000)).png images/ten_kilo.png
+ln -fs ../images/$((clarkes/1000%10)).png images/kilo.png
+ln -fs ../images/$((clarkes/100%10)).png images/hecto.png
+ln -fs ../images/$((clarkes/10%10)).png images/ten_clarke.png
+ln -fs ../images/$((clarkes%10)).png images/clarke.png

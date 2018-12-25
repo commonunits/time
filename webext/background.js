@@ -1,4 +1,5 @@
 "use strict";
+var browser = (typeof browser === 'undefined') ? chrome : browser;
 
 function OpenCommonUnitsTime() {
 	browser.tabs.create({

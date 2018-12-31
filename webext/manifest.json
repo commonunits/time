@@ -3,7 +3,7 @@
 	"manifest_version": 2,
 	"name": "CommonUnits time",
 	"version": "1.0.1",
-	"homepage_url": "https://github.com/limatgans/Cutime-Extension",
+	"homepage_url": "https://github.com/commonunits/time",
 	"icons": {
 		"48": "./assests/images/icons/icon-book.png"
 	},

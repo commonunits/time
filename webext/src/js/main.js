@@ -4,7 +4,16 @@ window.addEventListener("load", (function () {
 	const commonUnitsTime = document.getElementById("cu-time");
 	const percentOfToday = document.getElementById("cu-percent");
 	const progressLoader = document.getElementById("progress-loader");
-	const siTime = document.getElementById("si-time").children[0];
+	const siDate = document.getElementById("si-time").querySelector('.date');
+	const siTime = document.getElementById("si-time").querySelector('.time');
+
+	siDate.addEventListener('click', () =>
+		localStorage.setItem('useISO',
+			localStorage.getItem('useISO') ? '' : '1'));
+
+	siTime.addEventListener('click', () =>
+		localStorage.setItem('use24h',
+			localStorage.getItem('use24h') ? '' : '1'));
 
 	const [ kiloClarke, hectoClarke, clarke ] = Array
 		.from(commonUnitsTime.children)
@@ -39,7 +48,16 @@ window.addEventListener("load", (function () {
 	setInterval(function () {
 
 		const now = new Date();
-		siTime.textContent = dateFns.format(now, 'DD/MM/YYYY hh:mm:ss A');
+		siDate.textContent = (
+			localStorage.getItem('useISO')
+				? dateFns.format(now, 'YYYY-MM-DD')
+				: dateFns.format(now, 'DD/MM/YYYY')
+		);
+		siTime.textContent = (
+			localStorage.getItem('use24h')
+				? dateFns.format(now, 'HH:mm:ss')
+				: dateFns.format(now, 'hh:mm:ss A')
+		);
 		const [ percent, kϾ, hϾ, Ͼ ] = convertTimeToCommonUnits(now);
 
 		const percentString = `${percent.toFixed(3)}%`;

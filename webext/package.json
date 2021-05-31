@@ -1,6 +1,6 @@
 {
 	"name": "@commonunits/time-web-ext",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Add CommonUnits time to new tab and toolbar.",
 	"main": "src/index.html",
 	"scripts": {
@@ -25,6 +25,6 @@
 	},
 	"homepage": "https://github.com/commonunits/time#readme",
 	"dependencies": {
-		"web-ext": "^2.9.3"
+		"web-ext": "^6.1.0"
 	}
 }

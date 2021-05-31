@@ -2,15 +2,13 @@
 	"description": "Add CommonUnits time to new tab and toolbar.",
 	"manifest_version": 2,
 	"name": "CommonUnits time",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"homepage_url": "https://github.com/commonunits/time",
 	"icons": {
 		"48": "./assests/images/icons/icon-book.png"
 	},
 	"background": {
-		"scripts": [
-			"background.js"
-		]
+		"scripts": ["background.js"]
 	},
 	"chrome_url_overrides": {
 		"newtab": "./src/index.html"

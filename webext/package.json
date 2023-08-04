@@ -17,7 +17,8 @@
 	],
 	"author": "Ganesh",
 	"contributors": [
-		"Muthu Kumar <@MKRhere> (https://mkr.pw)"
+		"Muthu Kumar <@MKRhere> (https://mkr.pw)",
+		"Ceda EI <@Ceda-EI> (https://webionite.com)"
 	],
 	"license": "MIT",
 	"bugs": {
@@ -25,6 +26,6 @@
 	},
 	"homepage": "https://github.com/commonunits/time#readme",
 	"dependencies": {
-		"web-ext": "^6.1.0"
+		"web-ext": "^7.6.2"
 	}
 }
